@@ -180,11 +180,11 @@ nmap <C-S> :update<CR>
 
 
 
-首页输入 CTRL + V 或者 CTRL + Q 选择 几列作为注释符合添加到位置
+首页输入 CTRL + V 或者 CTRL + Q 选择 几列作为注释符号添加到位置
 
 
 
-然后输入 大写的 i 即 Shift + i 然后输入 注释符合 # 或者 /
+然后输入 大写的 i 即 Shift + i 然后输入 注释符号 # 或者 /
 
 然后按下 ESC　即可创建多行注释
 
@@ -194,7 +194,7 @@ nmap <C-S> :update<CR>
 
 
 
-CTRL + V 或者 CTRL + Q　选择注释符合所在的列
+CTRL + V 或者 CTRL + Q　选择注释符号所在的列
 
 输入　x 或者　d　即可删除。
 
