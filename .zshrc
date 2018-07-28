@@ -108,11 +108,6 @@ source /home/miku/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
-export OWNER=root
-export DB=120.78.144.47
-export DB_PASSWORD=sj@123456
-export PORT=3306
-export DATABASE=markdown
 export PATH=$PATH:/usr/local/texlive/2017/texmf-dist/doc/man
 export PATH=$PATH:/usr/local/texlive/2017/texmf-dist/doc/info
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
