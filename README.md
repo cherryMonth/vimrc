@@ -26,61 +26,32 @@ zsh vim.sh
 
 GitHub 的教程有详细的教程，但是此处我就写点最常用的。
 
-
-
 以下命令都是在命令模式下执行，不是转移模式
-
-
 
 ,e 默认打开文件 打开之后可以输入文件名进行模糊匹配
 
-
-
-,g  在当前文件中进行查找模糊符号 （类，方法，变量，函数)，如果输入 &#34;user&#34; 就会查询User类的介绍，此处与  ,f 不同， &#34;,f&#34; 用来查找模糊文本，更具与普遍性。
-
-
+,g 在当前文件中进行查找模糊符号 （类，方法，变量，函数)，如果输入 “user” 就会查询User类的介绍，此处与 ,f 不同， “,f” 用来查找模糊文本，更具与普遍性。
 
 ,f 在所有文本上进行模糊的文本查找。
 
-
-
 ,m 为最近使用过的文件模糊查找器。
-
-
 
 F4 查看当前文件的类，函数，方法等，并在按下ENTER时进行跳转。
 
-
-
 更好的文件浏览器，切换F3，或使用您选择的当前文件打开它,t
-
 使用当前文件保存为sudo:w!!
 
-
-
-&#34;shift  v &#34; + &#34; shift  g &#34; + &#34; =&#34; 自动格式化代码(自动缩进)
-
-
+“shift v “ + “ shift g “ + “ =” 自动格式化代码(自动缩进)
 
 \e 查看当前不满足PEP8的警告或者错误
 
-
-
 Ctrl + W + H(光标左移)，J(光标下移)，K(光标上移), L(光标右移)，可以从文件浏览器，代码块，代码结构快各个窗口之间来回跳转。
 
-
-
 :s /old/new 当前行中找到的第一个old 替换为new
-
 :s /old/new/g 当前行中查找到的所有old 替换为new
-
 :#,# s/old/new/g 行号“#,#”范围内替换所有的old为new
-
 :% s/old/new/g 整个文件范围内替换所有的old为new
-
 :s /old/new/c c命令:将对每个替换动作提示用户进行确认
-
-
 
 当写完函数但是不知道函数的参数时:
 
@@ -112,9 +83,7 @@ Ctrl + W + H(光标左移)，J(光标下移)，K(光标上移), L(光标右移)�
 
    os.popen()
 
-   import sys
-
-~                 
+   import sys                
 
 ```
 
@@ -128,56 +97,31 @@ Ctrl + W + H(光标左移)，J(光标下移)，K(光标上移), L(光标右移)�
 
 ```
 
-map &lt;F5&gt; :call CompileRunGcc()&lt;CR&gt;
-
+map <F5> :call CompileRunGcc()<CR>
     func! CompileRunGcc()
-
-        exec &#34;w&#34; 
-
-if &amp;filetype == &#39;c&#39; 
-
-            exec &#34;!g++ % -o %&lt;&#34;
-
-            exec &#34;!time ./%&lt;&#34;
-
-elseif &amp;filetype == &#39;cpp&#39;
-
-            exec &#34;!g++ % -o %&lt;&#34;
-
-            exec &#34;!time ./%&lt;&#34;
-
-elseif &amp;filetype == &#39;java&#39;
-
-            exec &#34;!javac %&#34;
-
-            exec &#34;!time java %&lt;&#34;
-
-elseif &amp;filetype == &#39;sh&#39;
-
+        exec "w" 
+if &filetype == 'c' 
+            exec "!g++ % -o %<"
+            exec "!time ./%<"
+elseif &filetype == 'cpp'
+            exec "!g++ % -o %<"
+            exec "!time ./%<"
+elseif &filetype == 'java'
+            exec "!javac %"
+            exec "!time java %<"
+elseif &filetype == 'sh'
             :!time bash %
-
-elseif &amp;filetype == &#39;python&#39;
-
-            exec &#34;!time python %&#34;
-
-elseif &amp;filetype == &#39;html&#39;
-
-            exec &#34;!firefox % &amp;&#34;
-
-elseif &amp;filetype == &#39;go&#39;
-
-    &#34;        exec &#34;!go build %&lt;&#34;
-
-            exec &#34;!time go run %&#34;
-
-elseif &amp;filetype == &#39;mkd&#39;
-
-            exec &#34;!~/.vim/markdown.pl % &gt; %.html &amp;&#34;
-
-            exec &#34;!firefox %.html &amp;&#34;
-
+elseif &filetype == 'python'
+            exec "!time python %"
+elseif &filetype == 'html'
+            exec "!firefox % &"
+elseif &filetype == 'go'
+    "        exec "!go build %<"
+            exec "!time go run %"
+elseif &filetype == 'mkd'
+            exec "!~/.vim/markdown.pl % > %.html &"
+            exec "!firefox %.html &"
 endif
-
     endfunc
 
 ```
@@ -224,11 +168,9 @@ Vim 默认 Ctrl + s是挂起终端， Ctrl + q 是恢复，但是一般情况下
 
 ```
 
-nmap &lt;C-S&gt; :update&lt;CR&gt;
-
-437 vmap &lt;C-S&gt; &lt;C-C&gt;:update&lt;CR&gt;
-
-438 imap &lt;C-S&gt; &lt;C-O&gt;:update&lt;CR&gt;
+nmap <C-S> :update<CR>
+437 vmap <C-S> <C-C>:update<CR>
+438 imap <C-S> <C-O>:update<CR>
 
 ```
 
