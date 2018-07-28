@@ -108,17 +108,4 @@ source /home/miku/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
-export PATH=$PATH:/usr/local/texlive/2017/texmf-dist/doc/man
-export PATH=$PATH:/usr/local/texlive/2017/texmf-dist/doc/info
-export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
-export HADOOP_USER_NAME=root
-export ANACONDA_HOME=/home/miku/anaconda2
-export PATH=$PATH:$ANACONDA_HOME/bin
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export ORACLE_HOME=/usr/lib/oracle/11.2/client64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
-export TNS_ADMIN=$ORACLE_HOME
-export PATH=$PATH:$ORACLE_HOME/bin
 stty -ixon
